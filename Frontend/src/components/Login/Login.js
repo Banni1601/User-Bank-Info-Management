@@ -37,7 +37,7 @@ function Login() {
       password: state.password
     };
     console.log(formData);
-    await axios.post("http://localhost:5000/api/auth/login", formData)
+    await axios.post("https://user-bank-info-management.vercel.app/api/auth/login", formData)
       .then((response) => {
         if (response.status === 200) {
           setPopUps((i) => ({ ...i, loading: true }));
