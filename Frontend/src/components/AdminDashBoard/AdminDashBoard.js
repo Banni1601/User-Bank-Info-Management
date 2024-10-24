@@ -16,7 +16,7 @@ const AdminDashBoard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/admin/All");
+        const response = await axios.get("https://user-bank-info-management.vercel.app/api/admin/All");
         const { users, bankAccounts } = response.data;
 
         const combinedData = users.map(user => {
