@@ -62,7 +62,7 @@ function RegisterPage() {
       };
       
       try {
-        const response = await axios.post("http://localhost:5000/api/auth/register", formData);
+        const response = await axios.post("https://user-bank-info-management.vercel.app/api/auth/register", formData);
         if (response.status === 201) {
           setPopUps((prevState) => ({ ...prevState, loading: true }));
           const p_token = response.data.token;
