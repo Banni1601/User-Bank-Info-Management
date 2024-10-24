@@ -16,9 +16,9 @@ const UserDetails = ({ userName, userEmail, userRole, userId, bankAccounts, setB
 
   const handleDelete = async (bankId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/bank/${bankId}`);
+      await axios.delete(`https://user-bank-info-management.vercel.app/api/bank/${bankId}`);
       const response = await axios.get(
-        `http://localhost:5000/api/bank/specificUserBankAccounts/${userId}`
+        `https://user-bank-info-management.vercel.app/api/bank/specificUserBankAccounts/${userId}`
       );
       setBankAccounts(response.data.reverse());
     } catch (error) {
@@ -30,11 +30,11 @@ const UserDetails = ({ userName, userEmail, userRole, userId, bankAccounts, setB
     e.preventDefault();
     try {
       await axios.post(
-        `http://localhost:5000/api/bank/addBankAccount/${userId}`,
+        `https://user-bank-info-management.vercel.app/api/bank/addBankAccount/${userId}`,
         newAccount
       );
       const updatedAccounts = await axios.get(
-        `http://localhost:5000/api/bank/specificUserBankAccounts/${userId}`
+        `https://user-bank-info-management.vercel.app/api/bank/specificUserBankAccounts/${userId}`
       );
       setBankAccounts(updatedAccounts.data.reverse());
       setShowAddAccountModal(false);
@@ -47,9 +47,9 @@ const UserDetails = ({ userName, userEmail, userRole, userId, bankAccounts, setB
   const handleUpdateAccount = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/bank/${currentAccountId}`, newAccount);
+      await axios.put(`https://user-bank-info-management.vercel.app/api/bank/${currentAccountId}`, newAccount);
       const updatedAccounts = await axios.get(
-        `http://localhost:5000/api/bank/specificUserBankAccounts/${userId}`
+        `https://user-bank-info-management.vercel.app/api/bank/specificUserBankAccounts/${userId}`
       );
       setBankAccounts(updatedAccounts.data.reverse());
       setShowUpdateAccountModal(false);
