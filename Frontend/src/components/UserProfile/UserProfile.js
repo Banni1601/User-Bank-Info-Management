@@ -20,7 +20,7 @@ const UserProfile = () => {
     const fetchBankAccounts = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/bank/specificUserBankAccounts/${user.userId}`
+          `https://user-bank-info-management.vercel.app/api/bank/specificUserBankAccounts/${user.userId}`
         );
         setBankAccounts(response.data.reverse());
       } catch (error) {
