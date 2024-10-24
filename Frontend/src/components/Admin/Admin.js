@@ -34,7 +34,7 @@ function Admin() {
       password: state.password
     };
    
-    await axios.post("http://localhost:5000/api/auth/login", formData)
+    await axios.post("https://user-bank-info-management.vercel.app/api/auth/login", formData)
       .then((response) => {
         if (response.status === 200 && response.data.user.role==="admin") {
       
