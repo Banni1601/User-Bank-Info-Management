@@ -1,0 +1,9 @@
+.social-icon {
+  color: white; /* Default icon color */
+  transition: color 0.3s; /* Smooth transition for color change */
+font-size: 26px;;
+}
+
+.social-icon:hover {
+  color: #00bfff; /* Change to the desired color on hover */
+}

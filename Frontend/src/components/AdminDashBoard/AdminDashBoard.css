@@ -1,0 +1,256 @@
+/* AdminDashBoard.css */
+
+/* Basic styles */
+.admin-dashboard {
+    padding: 20px;
+    margin-top: 80px;
+   
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 20px auto; /* Center search bar on all screens */
+    display: block; /* Ensures it stays centered */
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Table container for responsive design */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+/* Colorful table headings */
+th {
+    background: linear-gradient(45deg, #ff6f61, #ff9966, #fbc2eb);
+    color: #fff;
+    font-weight: bold;
+}
+
+.nested-table th, .nested-table td {
+    padding: 8px;
+}
+
+td:first-child, th:first-child {
+    text-align: center; /* Align serial numbers in the center */
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button.active {
+    background-color: #0056b3;
+}
+
+.pagination button:hover:not(.active):not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Colorful background and stylish typography */
+.colorful-background {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.admin-title {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    color: #fff;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.styled-table thead tr {
+    background: linear-gradient(45deg, #4CAF50, #81C784);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.user-row {
+    background-color: #f3f3f3;
+}
+
+.nested-table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.nested-table th, .nested-table td {
+    padding: 8px 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover:not(.active) {
+    background-color: #0056b3;
+}
+
+.pagination button.active {
+    background-color: #ff5722;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Colorful table headings */
+th {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* New gradient: Blue to Purple */
+    color: #fff;
+    font-weight: bold;
+}
+
+/* row*/
+/* Colorful background for bank account rows */
+.nested-table tbody tr:nth-child(odd) {
+    background-color: #f0f8ff; /* Light Blue for odd rows */
+}
+
+.nested-table tbody tr:nth-child(even) {
+    background-color: #e6e6fa; /* Light Lavender for even rows */
+}
+
+/* Hover effect to highlight a row */
+.nested-table tbody tr:hover {
+    background-color: #dcdcdc; /* Gray when hovered */
+    transition: background-color 0.3s ease;
+}
+
+/* Bank account table header styling */
+.nested-table th {
+    background-color: #1e90ff; /* DodgerBlue for headers */
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Additional style for table borders */
+.nested-table td, .nested-table th {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* row*/
+/* Responsive Styles */
+
+/* For small devices (up to 640px) */
+@media only screen and (max-width: 640px) {
+    th, td {
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    .search-bar {
+      font-size: 14px;
+    }
+
+    .admin-dashboard h1, .admin-dashboard h2 {
+      font-size: 18px;
+    }
+}
+
+/* For medium devices (up to 768px) */
+@media only screen and (max-width: 768px) {
+    th, td {
+      font-size: 14px;
+    }
+
+    .admin-dashboard h1, .admin-dashboard h2 {
+      font-size: 20px;
+    }
+}
+
+/* For large devices (up to 1024px) */
+@media only screen and (max-width: 1024px) {
+    th, td {
+      font-size: 16px;
+    }
+
+    .admin-dashboard h1, .admin-dashboard h2 {
+      font-size: 22px;
+    }
+}
+
+/* For extra large devices (1280px and above) */
+@media only screen and (min-width: 1280px) {
+    th, td {
+      font-size: 18px;
+    }
+
+    .admin-dashboard h1, .admin-dashboard h2 {
+      font-size: 24px;
+    }
+}

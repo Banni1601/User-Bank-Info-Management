@@ -1,0 +1,122 @@
+
+
+/* Universal reset and box-sizing */
+* {
+    margin: 0;
+    
+    padding:0;
+    box-sizing: border-box;
+    
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f7; /* Light background color */
+    color: #333;
+  }
+  
+  /* Main container styling */
+  .App {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* White background for profile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+  }
+  
+  /* Header styling */
+  h1 {
+    font-size: 2.5rem;
+    color: #4a90e2; /* Blue accent for header */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* User Details container */
+  .user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Bank account list styling */
+  .bank-accounts {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .bank-account {
+    background-color: #f5f7fa; /* Light grey background */
+    border-left: 4px solid #4a90e2; /* Left border for emphasis */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    transition: transform 0.3s;
+  }
+  
+  .bank-account:hover {
+    transform: translateY(-5px); /* Lifting effect on hover */
+  }
+  
+  /* Button styling */
+  button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #357abd; /* Darker shade on hover */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .App {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .user-details {
+      padding: 15px;
+    }
+  
+    .bank-account {
+      padding: 8px;
+    }
+  
+    button {
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+  
+    .bank-account {
+      padding: 6px;
+    }
+  
+    button {
+      padding: 6px 12px;
+    }
+  }
+  
